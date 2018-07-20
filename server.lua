@@ -6,7 +6,7 @@ AddEventHandler('FaxSM:CheckSession', function(clientPlayerNumber)
 	if source ~= nil then
 		serverPlayerNumber = countPlayer()
 		if serverPlayerNumber-clientPlayerNumber > 4 then 
-			TriggerClientEvent("FaxSM:SendMessage")
+			TriggerClientEvent(source, "FaxSM:SendMessage")
 		end
 	end
 end)
